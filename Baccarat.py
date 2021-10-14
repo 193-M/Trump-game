@@ -91,15 +91,15 @@ class Baccarat:
                 #bankerのハンドとplayerのドローによって分岐
                 if banker_hand_first <= 6:
                     if banker_hand_first <= 2:
-                        banker_hand.append(deck.draw())
+                        banker_hand.append(Baccarat.trump().draw(deck))
                     elif banker_hand_first == 3 and add_num != 8:
-                        banker_hand.append(deck.draw())
+                        banker_hand.append(Baccarat.trump().draw(deck))
                     elif banker_hand_first == 4 and 2 <= add_num <= 7:
-                        banker_hand.append(deck.draw())
+                        banker_hand.append(Baccarat.trump().draw(deck))
                     elif banker_hand_first == 5 and 4 <= add_num <= 7:
-                        banker_hand.append(deck.draw())
+                        banker_hand.append(Baccarat.trump().draw(deck))
                     elif banker_hand_first == 6 and 6 <= add_num <= 7:
-                        banker_hand.append(deck.draw())
+                        banker_hand.append(Baccarat.trump().draw(deck))
                     if len(banker_hand) == 3:
                         game_continue = input("Bankerがドローします。エンターを押してください。")
                         print("Bankerは{}をドローしました。".format(banker_hand[2]))

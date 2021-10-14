@@ -1,4 +1,4 @@
-class Trump():
+class Trump:
     def __init__(self):
         from random import shuffle
         self.suits = ["♤", "♧", "♡", "♢"]
@@ -24,4 +24,3 @@ class Trump():
         else:
             number = int(value)
         return number
-
